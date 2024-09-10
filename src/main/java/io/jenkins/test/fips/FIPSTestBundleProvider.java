@@ -65,7 +65,7 @@ public interface FIPSTestBundleProvider {
      * @return instance on {@link FIPSTestBundleProvider} according ot
      */
     static FIPSTestBundleProvider get(String version) {
-        String overrideVersion = System.getenv("FIPS_TEST_BUNDLE_VERSION");
+        String overrideVersion = System.getenv(ENV_VAR_KEY);
         Stream<ServiceLoader.Provider<FIPSTestBundleProvider>> stream =
                 ServiceLoader.load(FIPSTestBundleProvider.class).stream();
         if (overrideVersion != null) {

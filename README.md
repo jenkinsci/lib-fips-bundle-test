@@ -2,17 +2,33 @@
 
 ## Introduction
 
-TODO Describe what your plugin does here
+This library will bundle known validated BouncyCastle FIPS provider, will provide java options and bootclasspath files.
 
 ## Getting started
 
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
+Just add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
+
+```java
+    @Rule public RealJenkinsRule rr = new RealJenkinsRule()
+            .withFIPSEnabled();
+
+```
+
+To use a specific version of the bundle
+
+```java
+    @Rule public RealJenkinsRule rr = new RealJenkinsRule()
+            .withFIPSEnabled(FIPSTestBundleProvider.get("some version"));
+
+```
+
+If you need (such PCT context which need to use a fixed version) to override the version defined in the test code, the version can be overriden using:
+
+- Env var: `ENV_VAR_KEY`
+- System property: `fips.test.bundle.version`
+
 
 ## Issues
-
-TODO Decide where you're going to host your issues, the default is Jenkins JIRA, but you can also enable GitHub issues,
-If you use GitHub issues there's no need for this section; else add the following line:
 
 Report issues and enhancements in the [Jenkins issue tracker](https://issues.jenkins.io/).
 
