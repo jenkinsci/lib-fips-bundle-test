@@ -1,0 +1,2 @@
+_extends: .github
+tag-template: fips-bundle-test-$NEXT_MINOR_VERSION
