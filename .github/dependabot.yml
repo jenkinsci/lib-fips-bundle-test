@@ -6,6 +6,9 @@ updates:
   directory: /
   schedule:
     interval: monthly
+  ignore:
+    - dependency-name: "org.bouncycastle:*"
+      versions: [ ">=0.0.1" ]
 - package-ecosystem: github-actions
   directory: /
   schedule:
