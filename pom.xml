@@ -10,7 +10,7 @@
   </parent>
 
   <groupId>io.jenkins.test.fips</groupId>
-  <artifactId>fips-bundle-test</artifactId>
+  <artifactId>lib-fips-bundle-test</artifactId>
   <version>${revision}${changelist}</version>
   <packaging>jar</packaging>
 
