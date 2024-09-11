@@ -31,7 +31,7 @@
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
-    <revision>1.0.0</revision>
+    <revision>0.0.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}</gitHubRepo>
   </properties>
