@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
 import java.util.ServiceLoader;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 public class FIPSTestBundleProviderTest {
@@ -19,7 +20,7 @@ public class FIPSTestBundleProviderTest {
 
         List<FIPSTestBundleProvider> bundles = ServiceLoader.load(FIPSTestBundleProvider.class).stream()
                 .map(ServiceLoader.Provider::get)
-                .toList();
+                .collect(Collectors.toUnmodifiableList());
         assertThat(bundles, not(empty()));
         assertThat(bundles, hasSize(1));
     }

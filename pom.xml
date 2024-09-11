@@ -30,6 +30,7 @@
   </scm>
 
   <properties>
+    <maven.compiler.release>11</maven.compiler.release>
     <revision>1.0.0</revision>
     <changelist>-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/${project.artifactId}</gitHubRepo>
