@@ -11,7 +11,7 @@
 
   <groupId>io.jenkins.test.fips</groupId>
   <artifactId>lib-fips-bundle-test</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${changelist}</version>
   <packaging>jar</packaging>
 
   <name>FIPS Bundle libraries</name>
