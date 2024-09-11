@@ -31,7 +31,7 @@ If you need (such PCT context which need to use a fixed version) to override the
 
 ## Issues
 
-Report issues and enhancements in the [Jenkins issue tracker](https://issues.jenkins.io/).
+Report issues and enhancements in the [Github project issue tracker]([https://issues.jenkins.io/](https://github.com/jenkinsci/lib-fips-bundle-test/issues)).
 
 ## Contributing
 
