@@ -10,12 +10,12 @@
   </parent>
 
   <groupId>io.jenkins.test.fips</groupId>
-  <artifactId>lib-fips-bundle-test</artifactId>
+  <artifactId>fips-bundle-test</artifactId>
   <version>${changelist}</version>
   <packaging>jar</packaging>
 
   <name>FIPS Bundle libraries</name>
-  <url>https://github.com/jenkinsci/${project.artifactId}</url>
+  <url>https://github.com/jenkinsci/lib-${project.artifactId}</url>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -32,7 +32,7 @@
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
     <changelist>999999-SNAPSHOT</changelist>
-    <gitHubRepo>jenkinsci/${project.artifactId}</gitHubRepo>
+    <gitHubRepo>jenkinsci/lib-${project.artifactId}</gitHubRepo>
   </properties>
 
   <dependencyManagement>
