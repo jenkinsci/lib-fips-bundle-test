@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Properties;
 
 @MetaInfServices(FIPSTestBundleProvider.class)
-public class FIPS1402BC2x implements FIPSTestBundleProvider {
+public class FIPS1403BC2x implements FIPSTestBundleProvider {
 
-    public static final String VERSION = "fips-140_2-2.x";
+    public static final String VERSION = "fips-140_3-2.x";
 
     @Override
     public String getVersion() {

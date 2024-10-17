@@ -42,9 +42,9 @@ public class FIPSTestBundleProviderTest {
 
     @Test
     public void get_fips1402x() throws Exception {
-        FIPSTestBundleProvider provider = FIPSTestBundleProvider.get(FIPS1402BC2x.VERSION);
+        FIPSTestBundleProvider provider = FIPSTestBundleProvider.get(FIPS1403BC2x.VERSION);
         assertThat(provider, notNullValue());
-        assertThat(provider.getVersion(), is(FIPS1402BC2x.VERSION));
+        assertThat(provider.getVersion(), is(FIPS1403BC2x.VERSION));
         assertThat(provider.getBootClasspathFiles(), hasSize(3));
     }
 }
