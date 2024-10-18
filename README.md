@@ -5,6 +5,14 @@
 This library will bundle known validated BouncyCastle FIPS provider, will provide java options and bootclasspath files.
 Provide test support tools for [JEP-237](https://github.com/jenkinsci/jep/tree/master/jep/237)
 
+Please note more simple tests which does not need FIPS validated cryptography modules can simply use idiom to activate the system property:
+
+```java
+    @ClassRule
+    public static FlagRule<String> fipsSystemPropertyRule =
+            FlagRule.systemProperty("jenkins.security.FIPS140.COMPLIANCE", "true");
+```
+
 ## Getting started
 
 Just add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
