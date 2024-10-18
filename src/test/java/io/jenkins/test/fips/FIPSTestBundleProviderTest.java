@@ -22,7 +22,7 @@ public class FIPSTestBundleProviderTest {
                 .map(ServiceLoader.Provider::get)
                 .collect(Collectors.toUnmodifiableList());
         assertThat(bundles, not(empty()));
-        assertThat(bundles, hasSize(1));
+        assertThat(bundles, hasSize(2));
     }
 
     @Test
@@ -37,6 +37,14 @@ public class FIPSTestBundleProviderTest {
         FIPSTestBundleProvider provider = FIPSTestBundleProvider.get(FIPS1402BC1x.VERSION);
         assertThat(provider, notNullValue());
         assertThat(provider.getVersion(), is(FIPS1402BC1x.VERSION));
+        assertThat(provider.getBootClasspathFiles(), hasSize(3));
+    }
+
+    @Test
+    public void get_fips1402x() throws Exception {
+        FIPSTestBundleProvider provider = FIPSTestBundleProvider.get(FIPS1403BC2x.VERSION);
+        assertThat(provider, notNullValue());
+        assertThat(provider.getVersion(), is(FIPS1403BC2x.VERSION));
         assertThat(provider.getBootClasspathFiles(), hasSize(3));
     }
 }

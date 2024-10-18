@@ -115,6 +115,33 @@
               <stripVersion>true</stripVersion>
             </configuration>
           </execution>
+          <execution>
+            <id>copy-fips-libs-2.x</id>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.bouncycastle</groupId>
+                  <artifactId>bc-fips</artifactId>
+                  <version>2.0.0</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.bouncycastle</groupId>
+                  <artifactId>bcpkix-fips</artifactId>
+                  <version>2.0.7</version>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.bouncycastle</groupId>
+                  <artifactId>bctls-fips</artifactId>
+                  <version>2.0.19</version>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${project.build.outputDirectory}/fips-140_3-2.x</outputDirectory>
+              <stripVersion>true</stripVersion>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
     </plugins>
