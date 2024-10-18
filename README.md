@@ -15,7 +15,7 @@ Please note more simple tests which does not need FIPS validated cryptography mo
 
 ## Getting started
 
-Just add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
+In order to include BouncyCastle as FIPS compliant cryptographic provider, you only need to add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
 
 ```java
     @Rule public RealJenkinsRule rr = new RealJenkinsRule()
@@ -27,9 +27,14 @@ To use a specific version of the bundle
 
 ```java
     @Rule public RealJenkinsRule rr = new RealJenkinsRule()
-            .withFIPSEnabled(FIPSTestBundleProvider.get("some version"));
+            .withFIPSEnabled(FIPSTestBundleProvider.get("version"));
 
 ```
+
+Version can be:
+- `FIPS1402BC1x.VERSION`
+- `FIPS1403BC2x.VERSION`
+
 
 If you need (such PCT context which need to use a fixed version) to override the version defined in the test code, the version can be overriden using:
 
