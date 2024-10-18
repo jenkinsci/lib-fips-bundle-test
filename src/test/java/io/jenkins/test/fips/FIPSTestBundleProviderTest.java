@@ -45,6 +45,6 @@ public class FIPSTestBundleProviderTest {
         FIPSTestBundleProvider provider = FIPSTestBundleProvider.get(FIPS1403BC2x.VERSION);
         assertThat(provider, notNullValue());
         assertThat(provider.getVersion(), is(FIPS1403BC2x.VERSION));
-        assertThat(provider.getBootClasspathFiles(), hasSize(3));
+        assertThat(provider.getBootClasspathFiles(), hasSize(4));
     }
 }

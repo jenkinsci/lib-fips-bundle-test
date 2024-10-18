@@ -40,6 +40,7 @@ public class FIPS1403BC2x implements FIPSTestBundleProvider {
         return List.of(
                 extractJar("bc-fips.jar").toFile(),
                 extractJar("bcpkix-fips.jar").toFile(),
+                extractJar("bcutil-fips.jar").toFile(),
                 extractJar("bctls-fips.jar").toFile());
     }
 
