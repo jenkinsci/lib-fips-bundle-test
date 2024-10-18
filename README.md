@@ -5,9 +5,17 @@
 This library will bundle known validated BouncyCastle FIPS provider, will provide java options and bootclasspath files.
 Provide test support tools for [JEP-237](https://github.com/jenkinsci/jep/tree/master/jep/237)
 
+Please note more simple tests which does not need FIPS validated cryptography modules can simply use idiom to activate the system property:
+
+```java
+    @ClassRule
+    public static FlagRule<String> fipsSystemPropertyRule =
+            FlagRule.systemProperty("jenkins.security.FIPS140.COMPLIANCE", "true");
+```
+
 ## Getting started
 
-Just add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
+In order to include BouncyCastle as FIPS compliant cryptographic provider, you only need to add this to your usage of [RealJenkinsRule](https://javadoc.jenkins.io/component/jenkins-test-harness/org/jvnet/hudson/test/RealJenkinsRule.html)
 
 ```java
     @Rule public RealJenkinsRule rr = new RealJenkinsRule()
@@ -19,9 +27,14 @@ To use a specific version of the bundle
 
 ```java
     @Rule public RealJenkinsRule rr = new RealJenkinsRule()
-            .withFIPSEnabled(FIPSTestBundleProvider.get("some version"));
+            .withFIPSEnabled(FIPSTestBundleProvider.get("version"));
 
 ```
+
+Version can be:
+- `FIPS1402BC1x.VERSION`
+- `FIPS1403BC2x.VERSION`
+
 
 If you need (such PCT context which need to use a fixed version) to override the version defined in the test code, the version can be overriden using:
 
