@@ -24,7 +24,7 @@ public interface FIPSTestBundleProvider {
 
     Logger LOGGER = Logger.getLogger(FIPSTestBundleProvider.class.getName());
 
-    String DEFAULT_VERSION = FIPS1402BC1x.VERSION;
+    String DEFAULT_VERSION = FIPS1402BC2x.VERSION;
 
     String SYS_PROP_KEY = "fips.test.bundle.version";
 
